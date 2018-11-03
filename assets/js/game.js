@@ -135,10 +135,10 @@ $(document).ready(function(){
             $(this).css('background','green');
             imgname = "correct.gif";
             clearTimeout(timeout);
-            timeout = setTimeout(showImg,2000);
+            timeout = setTimeout(showImg,500);
         }else{
             $(this).css('background','red');
-                wrongAnswer();
+            wrongAnswer();
         }
     });
     //wrong answer function
@@ -147,7 +147,7 @@ $(document).ready(function(){
         wrong_answers++;
         imgname = "wrong.gif";
         clearTimeout(timeout);
-        timeout = setTimeout(showImg,2000);
+        timeout = setTimeout(showImg,500);
     }
     //show image function
     function showImg(){
