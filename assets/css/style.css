@@ -2,6 +2,12 @@
 *, *:before, *:after{
   box-sizing:border-box;
 }
+body{
+    background:url("/assets/images/background.jpg");
+    background-size: 100%;
+    margin:0;
+    background-repeat: round;
+}
 .jumptron{
     background: rgba(255,255,255,0.5);
 }
@@ -68,15 +74,7 @@ div.foo{
     rotateZ(0deg)
     skew(0deg,22deg);
 }
-body{
-    background:url("/assets/images/background.jpg");
-    background-size: 100%;
-    margin:0;
-    background-repeat: round;
-}
-*{
-    box-sizing: border-box;
-}
+
 .container{
     height:100vh;
     display: flex;
