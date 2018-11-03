@@ -1,0 +1,216 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:900);
+*, *:before, *:after{
+  box-sizing:border-box;
+}
+.jumptron{
+    background: rgba(255,255,255,0.5);
+}
+div.foo{
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+}
+.letter{
+  display: inline-block;
+  font-weight: 900;
+  font-size: 100px;
+  margin: 0.2em;
+  position: relative;
+  color: #00B4F1;
+  transform-style: preserve-3d;
+  perspective: 400;
+  z-index: 1;
+}
+.letter:before, .letter:after{
+  position:absolute;
+  content: attr(data-letter);
+  transform-origin: top left;
+  top:0;
+  left:0;
+}
+.letter, .letter:before, .letter:after{
+  transition: all 0.3s ease-in-out;
+}
+.letter:before{
+  color: rgb(10, 0, 0);
+  text-shadow: 
+    -1px 0px 1px rgba(255,255,255,.8),
+    1px 0px 1px rgba(0,0,0,.8);
+  z-index: 3;
+  transform:
+    rotateX(0deg)
+    rotateY(-15deg)
+    rotateZ(0deg);
+}
+.letter:after{
+  color: rgba(0,0,0,.11);
+  z-index:2;
+  transform:
+    scale(1.08,1)
+    rotateX(0deg)
+    rotateY(0deg)
+    rotateZ(0deg)
+    skew(0deg,1deg);
+}
+.letter:hover:before{
+  color: #fafafa;
+  transform:
+    rotateX(0deg)
+    rotateY(-40deg)
+    rotateZ(0deg);
+}
+.letter:hover:after{
+  transform:
+    scale(1.08,1)
+    rotateX(0deg)
+    rotateY(40deg)
+    rotateZ(0deg)
+    skew(0deg,22deg);
+}
+body{
+    background:url("/assets/images/background.jpg");
+    background-size: 100%;
+    margin:0;
+    background-repeat: round;
+}
+*{
+    box-sizing: border-box;
+}
+.container{
+    height:100vh;
+    display: flex;
+    align-items: center;
+}
+.content{
+    background: rgba(255,255,255,0.5);
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.game{
+    background: rgba(0, 0, 0, 0.8);
+    width: 80%;
+    height: 90%;
+    color: antiquewhite;
+    font-family: 'Srisakdi', cursive;
+    clear: both;
+}
+.game .result{
+    border: #01FF70 solid 1px;
+    border-radius: 5px;
+    width: 50%;
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px;
+    font-family: 'Cinzel Decorative', cursive;
+}
+.game p{
+    padding-top: 15px;
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+}
+.timediv{
+    margin-top: 20px;
+}
+.game h2 span{
+    font-size: 30px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+.questiondiv{
+    margin-top: 30px;
+    font-family: 'Lato', sans-serif;
+}
+.answerdiv{
+    margin-top: 40px;
+}
+.answers{
+    margin-top: 10px;
+}
+.options{
+    width: 50%;
+    margin: auto;
+    height: 5vh;
+    background: rgba(255,255,255,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-family: 'Cinzel Decorative', cursive;
+    cursor: pointer;
+    transition: width 1s, height 1s, background 1s;
+    -webkit-transition: width 1s, height 1s, background 1s;
+    -o-transition: width 1s, height 1s, background 1s;
+    -moz-transition: width 1s, height 1s, background 1s;
+}
+.options:hover{
+    width: 55%;
+    height: 6vh;
+}
+/* play again button */
+.button {
+    background: #3498db;
+    width: 180px;
+    padding: 4px 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+    border-radius: 3px;
+  }
+  .button p {
+    font-family: 'Roboto';
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFF;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  .button:hover {
+    cursor: pointer;
+  }
+  .button:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    border-radius: 50%;
+    background-color: #927608;
+    opacity: 0.4;
+    bottom: -30px;
+  }
+  .playagain{
+      margin-top:100px;
+  }
+  .displayimg{
+      margin-top: 10px;
+  }
+  .imgdiv{
+    width: 80%;
+    height: 70%;
+    margin: auto;
+  }
+  .imgdiv img{
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+  }
+@media screen 
+and (min-width: 320px) 
+and (max-width: 700px) 
+{ 
+    h2,.h2,.h3,h3{
+        font-size: 15px;
+    }
+    .letter{
+        font-size: 20px;
+    }
+    
+}

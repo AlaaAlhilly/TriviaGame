@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Srisakdi" rel="stylesheet">
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/game.js"></script>
+    <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Roboto:400" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>TRIVIA GAME</title>
+</head>
+
+<body>
+    <div class="row jumptron">
+        <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+            <div class="foo">
+                <span class="letter" data-letter="T">T</span>
+                <span class="letter" data-letter="R">R</span>
+                <span class="letter" data-letter="I">I</span>
+                <span class="letter" data-letter="V">V</span>
+                <span class="letter" data-letter="I">I</span>
+                <span class="letter" data-letter="A">A</span>
+                <span class="letter" data-letter="L">L</span>
+
+                <span class="letter" data-letter=" "></span>
+                <span class="letter" data-letter="G">G</span>
+                <span class="letter" data-letter="A">A</span>
+                <span class="letter" data-letter="M">M</span>
+                <span class="letter" data-letter="E">E</span>
+
+            </div>
+
+            <!-- <p>TOTALLY TRIVIAL TRIVIA</p> -->
+        </div>
+    </div>
+    <div class="container">
+        <div class="content">
+            <div class="game">
+
+                <div class="row timediv">
+                    <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                        <h2>Time remains :<span id="timeremains"></span></h2>
+                    </div>
+                </div>
+                <div class="row result">
+                    <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                        <h2>Correct Answers :<span id="correctanswers"></span></h2>
+                        <h2>Wrong Answers :<span id="wronganswers"></span></h2>
+                        <h2>Unanswered :<span id="unanswered"></span></h2>
+                    </div>
+                </div>
+                <div class="row questiondiv">
+                    <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                        <h2 id="question"></span></h2>
+                    </div>
+                </div>
+                <div class="row answerdiv">
+                    <div class="col-sm-12 col-md-12 col-lg-12 text-center answers">
+                        <div class="options">
+                            <h3 id="0"></h3>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-12 text-center answers">
+                        <div class="options">
+                            <h3 id="1" ></h3>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-12 text-center answers">
+                        <div class="options">
+                            <h3 id="2"></h3>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-12 text-center answers">
+                        <div class="options">
+                            <h3 id="3"></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row playagain">
+                    <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                        <div class="button">
+                            <p>Play Again</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row displayimage">
+                    <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                        <div class="imgdiv">
+                            <h2 id="rightanswer"></h2>
+                            <img id="imgcontainer" src="./assets/images/wrong.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var $button = document.querySelector('.button');
+        $button.addEventListener('click', function () {
+            var duration = 0.3,
+                delay = 0.08;
+            TweenMax.to($button, duration, { scaleY: 1.6, ease: Expo.easeOut });
+            TweenMax.to($button, duration, { scaleX: 1.2, scaleY: 1, ease: Back.easeOut, easeParams: [3], delay: delay });
+            TweenMax.to($button, duration * 1.25, { scaleX: 1, scaleY: 1, ease: Back.easeOut, easeParams: [6], delay: delay * 3 });
+        });
+    </script>
+</body>
+
+</html>
