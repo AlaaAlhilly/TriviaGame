@@ -106,7 +106,7 @@ $(document).ready(function(){
         unAnswered++;
         imgname = "noanswer.gif";
         clearTimeout(timeout);
-        timeout = setTimeout(showImg,2000);
+        timeout = setTimeout(showImg,500);
     }
     function reset(){
         $('.displayimage').hide();
