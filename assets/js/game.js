@@ -153,7 +153,7 @@ $(document).ready(function(){
     function showImg(){
         $('.answerdiv').hide();
         $('.displayimage').show(500);
-        $('#rightanswer').text(questionsArr[questions_counter].correct_answer);
+        $('#rightanswer').text("Correct Answer: "+questionsArr[questions_counter].correct_answer);
         $('#imgcontainer').attr('src','./assets/images/'+imgname);
         clearTimeout(timeout);
         timeout = setTimeout(reset,4000);
