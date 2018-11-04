@@ -17,6 +17,7 @@ div.foo{
   text-align: center;
   font-family: 'Lato', sans-serif;
 }
+/* the game title style */
 .letter{
   display: inline-block;
   font-weight: 900;
@@ -74,7 +75,7 @@ div.foo{
     rotateZ(0deg)
     skew(0deg,22deg);
 }
-
+/* the body of the game style */
 .container{
     height:100vh;
     display: flex;
